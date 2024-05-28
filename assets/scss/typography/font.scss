@@ -1,0 +1,63 @@
+
+@media (max-width: 1399.98px) {
+}
+@media (max-width: 1199.98px) {
+}
+@media (max-width: 991.98px) {
+}
+@media (max-width: 767.98px) {
+}
+@media (max-width: 575.98px) {
+} 
+/* Fonts & Colors */
+$color-primary:  #4e4d50;  
+$color-secondary: #333333;  
+$color_neutral:  #E9EDFF;
+$color-light: #f0f5fa; 
+
+.color-primary { color: $color-primary } 
+.color-secondary {color: $color-secondary}  
+.color_neutral{ color: $color_neutral}  
+.color-light{ color: $color-light} 
+
+  
+h1, h2, h3, h4, h5, h6 {font-family: 'Poppins',  "Helvetica Neue", Helvetica, Tahoma, sans-serif,  Arial, sans-serif; line-height: 1.2em; font-display: swap; }
+body{ background-color: $color-light; color:$color-secondary; font-size: 16px; font-family: 'Poppins',  "Helvetica Neue", Helvetica, Tahoma, sans-serif,  Arial, sans-serif;  line-height: 1.3em; font-display: swap;} 
+p {line-height: 1.4em;  font-family: 'Poppins',  "Helvetica Neue", Helvetica, Tahoma, sans-serif,  Arial, sans-serif; font-display: swap; }
+a,button { outline: none;  font-family: 'Poppins',  "Helvetica Neue", Helvetica, Tahoma, sans-serif,  Arial, sans-serif; cursor: pointer; font-display: swap;}
+a { text-decoration: none; color:$color-secondary; font-display: swap; 
+&:hover { 
+    color: $color-primary;
+}
+}  
+mark { padding: 0;}
+  
+  
+@mixin a-font-size-xlarge {
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 67.2px; 
+    letter-spacing: -0.56px;
+       @media (max-width: 1399.98px) {
+        font-size: 50px;
+        line-height: 60px;
+       }
+       @media (max-width: 1199.98px) {
+        font-size: 45px;
+        line-height: 50px;
+       }
+       @media (max-width: 991.98px) {
+        font-size: 42px;
+        line-height: 47px;
+       }
+       @media (max-width: 767.98px) {
+        font-size: 32px;
+        line-height: 35px;
+       }
+       @media (max-width: 575.98px) {
+        font-size: 42px;
+        font-weight: 900;
+        line-height: 52px; 
+       }
+}

@@ -1,0 +1,14 @@
+/*
+Theme Name: DynamicStart
+Theme URI: http://pluginwp.com.br/
+Author: Thiago Ribeiro
+Author URI: http://pluginwp.com.br/
+Description: Tema dynamic_start 
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: bootstrap, Jquery, sass
+Text Domain: dynamic_start
+*/
+ @import 'assets/scss/index.css';
+ 
