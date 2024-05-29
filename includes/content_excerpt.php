@@ -11,7 +11,7 @@
 	  
  
         <article id="post-<?php the_ID(); ?>" <?php post_class('post-excerpt mb-4'); ?>>
-            <header class="entry-header mb-4 ">
+            <header class="entry-header mb-3 ">
                 <?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );?>
               
            

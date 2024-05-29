@@ -13,7 +13,7 @@
  * @link 	  http://pluginwp.com.br
  */
 ?>
-	<div id="comments">
+	<div id="comments" class="mt-3 mb-3">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'dynamic_start' ); ?></p>
 	</div><!-- #comments -->
@@ -76,17 +76,21 @@
 	<?php if (comments_open()) : ?>
 
     <?php
-    $fields = array(
-        'author' => '<p class="comment-form-author">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" />'.'<label for="author">' . __('Name','dynamic_start') . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '</p>',
-		
-        'email' => '<p class="comment-form-email">'.'<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '" size="30" />'.'<label for="email">' . __('E-mail','dynamic_start') . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .'</p>',
-		
-        'url' => '<p class="comment-form-url">'.'<input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" />'.'<label for="url">' . __('Website','dynamic_start') . '</label>' . '</p>',
-    );
 
-    $defaults = array('fields' => apply_filters('comment_form_default_fields', $fields));
+$fields = array(
+    'author' => '<p class="comment-form-author">' . '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) . '" size="30" maxlength="150"/>'.'<label for="author">' . __('Name','dynamic_start') . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '</p>',
+    'email' => '<p class="comment-form-email">'.'<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) . '" size="30" maxlength="150" />'.'<label for="email">' . __('E-mail','dynamic_start') . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .'</p>',
+    'url' => '<p class="comment-form-url">'.'<input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) . '" size="30" maxlength="150" />'.'<label for="url">' . __('Website','dynamic_start') . '</label>' . '</p>',
+);
 
-    comment_form($defaults);
+$defaults = array(
+    'fields' => apply_filters('comment_form_default_fields', $fields),
+    'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x('Comentário', 'noun') . '</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="1000" required="required"></textarea></p>', // Aqui você define o maxlength desejado
+);
+
+comment_form($defaults);
+
+ 
     ?>
 
     <?php endif; ?> <!-- /comments_open -->

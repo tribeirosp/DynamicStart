@@ -9,6 +9,13 @@
 }
 @media (max-width: 575.98px) {
 }
+#comments { 
+    box-shadow: 0px 2px 20px 0px #dee0ea;
+    padding: 20px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
 #comments h2{margin:15px 0;}
 #comments span.date-and-time a { display: block; font-size:13px;color:#999; text-decoration: none; font-weight: normal; margin: 2px 0;}
 #comments p.comment-notes {font-size: 12px;	color: #333333;}

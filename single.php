@@ -22,14 +22,15 @@
 								<div class="post-entry">
 									<header class="entry-header">
 										<h1 class="entry-title"><?php the_title(); ?></h1>
+										
 										<div class="data-post">
-											<h3><b><?php _e('Publicado em:', 'dynamic_start'); ?></b> <?php echo the_time('d/m/Y');   ?></h3>
-										</div>
+											<h3><?php echo the_time('j, F, Y');   ?> · </h3>
+										</div>  
 										<?php show_category_post(); ?>
 									</header>
 									<?php the_content(); ?>
 									<footer class="entry-footer">
-										<div class="post-tags">
+										<div class="post-tags mb-3 mt-3">
 											<?php the_tags('<span class="tags">' . __('<b>Tags:</b> ', 'dynamic_start') . ' ', ", ", "</span>") ?>
 										</div>
 										<?php edit_post_link(__('Edit', 'dynamic_start'), '<span class="edit-link" >', '</span>'); ?>

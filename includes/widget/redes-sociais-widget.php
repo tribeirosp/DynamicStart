@@ -1,10 +1,12 @@
 <?php
 
 // Classe do Widget
-class Redes_Sociais_Widget extends WP_Widget {
+class Redes_Sociais_Widget extends WP_Widget
+{
 
     // Construtor do Widget
-    function __construct() {
+    function __construct()
+    {
         parent::__construct(
             'redes_sociais_widget',
             __('Redes Sociais Widget', 'text_domain'),
@@ -15,13 +17,14 @@ class Redes_Sociais_Widget extends WP_Widget {
     }
 
     // Formulário do Widget
-    public function form($instance) {
+    public function form($instance)
+    {
         $title = isset($instance['title']) ? $instance['title'] : '';
         $linkedin = isset($instance['linkedin']) ? $instance['linkedin'] : '';
         $youtube = isset($instance['youtube']) ? $instance['youtube'] : '';
         $instagram = isset($instance['instagram']) ? $instance['instagram'] : '';
         $facebook = isset($instance['facebook']) ? $instance['facebook'] : '';
-        ?>
+?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Título:', 'text_domain'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>">
@@ -42,11 +45,12 @@ class Redes_Sociais_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id('facebook'); ?>"><?php _e('Facebook:', 'text_domain'); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id('facebook'); ?>" name="<?php echo $this->get_field_name('facebook'); ?>" type="text" value="<?php echo esc_attr($facebook); ?>">
         </p>
-        <?php
+    <?php
     }
 
     // Atualiza as instâncias do Widget
-    public function update($new_instance, $old_instance) {
+    public function update($new_instance, $old_instance)
+    {
         $instance = array();
         $instance['title'] = isset($new_instance['title']) ? strip_tags($new_instance['title']) : '';
         $instance['linkedin'] = isset($new_instance['linkedin']) ? strip_tags($new_instance['linkedin']) : '';
@@ -57,7 +61,8 @@ class Redes_Sociais_Widget extends WP_Widget {
     }
 
     // Exibe o Widget
-    public function widget($args, $instance) {
+    public function widget($args, $instance)
+    {
         $title = isset($instance['title']) ? apply_filters('widget_title', $instance['title']) : '';
         $linkedin = isset($instance['linkedin']) ? $instance['linkedin'] : '';
         $youtube = isset($instance['youtube']) ? $instance['youtube'] : '';
@@ -68,22 +73,40 @@ class Redes_Sociais_Widget extends WP_Widget {
         if (!empty($title)) {
             echo $args['before_title'] . $title . $args['after_title'];
         }
-        ?>
+    ?>
+
+
         <ul class="redes-sociais">
             <?php if (!empty($linkedin)) : ?>
-                <li><a href="<?php echo esc_url($linkedin); ?>" target="_blank">LinkedIn</a></li>
+                <li>
+                    <a class="mr-2 mb-1" rel="noreferrer" href="<?php echo esc_url($linkedin); ?>" target="_blank" title="LinkedIn">
+                        <i class="ti ti-brand-linkedin"></i>
+                    </a>
+                </li>
             <?php endif; ?>
             <?php if (!empty($youtube)) : ?>
-                <li><a href="<?php echo esc_url($youtube); ?>" target="_blank">YouTube</a></li>
+                <li>
+                    <a class="mr-2 mb-1" rel="noreferrer" href="<?php echo esc_url($youtube); ?>" target="_blank" title="Youtube">
+                        <i class="ti ti-brand-youtube"></i>
+                    </a>
+                </li>
             <?php endif; ?>
             <?php if (!empty($instagram)) : ?>
-                <li><a href="<?php echo esc_url($instagram); ?>" target="_blank">Instagram</a></li>
+                <li>
+                    <a class="mr-2 mb-1" rel="noreferrer" href="<?php echo esc_url($instagram); ?>" target="_blank" title="Instagram">
+                        <i class="ti ti-brand-instagram"></i>
+                    </a>
+                </li>
             <?php endif; ?>
             <?php if (!empty($facebook)) : ?>
-                <li><a href="<?php echo esc_url($facebook); ?>" target="_blank">Facebook</a></li>
+                <li>
+                    <a class="mr-2 mb-1" rel="noreferrer" href="<?php echo esc_url($facebook); ?>" target="_blank" title="Facebook">
+                        <i class="ti ti-brand-facebook"></i>
+                    </a>
+                </li>
             <?php endif; ?>
         </ul>
-        <?php
+<?php
         echo $args['after_widget'];
     }
 }
@@ -92,6 +115,7 @@ class Redes_Sociais_Widget extends WP_Widget {
 add_action('widgets_init', 'register_redes_sociais_widget');
 
 // Função para registrar o widget
-function register_redes_sociais_widget() {
+function register_redes_sociais_widget()
+{
     register_widget('Redes_Sociais_Widget');
 }
