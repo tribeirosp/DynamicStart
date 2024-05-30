@@ -20,7 +20,7 @@
 						<?php while (have_posts()) : the_post(); ?>
 							<article id="post-<?php the_ID(); ?>" <?php post_class('post single-post'); ?>>
 								<div class="post-entry">
-									<header class="entry-header">
+									<header class="entry-header mb-3 pb-2 ">
 										<h1 class="entry-title"><?php the_title(); ?></h1>
 										
 										<div class="data-post">

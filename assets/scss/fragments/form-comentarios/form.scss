@@ -12,7 +12,7 @@
 #respond p.comment-form-comment label{display:none;}
 #commentform p.comment-notes{color:#888;}
 #commentform p.form-allowed-tags{display:none;}
-#respond input[type="text"], #respond input[type="password"] {width: 320px; height: 30px;  padding: 0px 0px 0px 10px; margin-left: 5px; line-height: 20px; border:1px solid #CFCFCF;color:#555555;font-size: 13px; float: right; }
+#respond input[type="text"], #respond input[type="password"] {max-width: 320px; width: 100%; height: 30px;  padding: 0px 0px 0px 10px; margin-left: 5px; line-height: 20px; border:1px solid #CFCFCF;color:#555555;font-size: 13px; float: right; }
 #respond textarea{height: 165px; padding: 10px; width: 90%;	line-height: 20px; border:1px solid #CFCFCF;color:#555555;font-size: 13px;  }
 #respond #submit{-moz-transition:  .8s ease-in-out; -webkit-transition:  .8s ease-in-out; transition:  .8s ease-in-out;background: #41464b;	border: 1px solid #41464b;border-radius: 3px 3px 3px 3px;color:#eeeeee;	margin:0 0 20px;padding: 5px 7px;}
 #respond #submit:hover {cursor:pointer;color:#fff;background:#292f33;} 

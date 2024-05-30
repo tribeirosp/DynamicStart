@@ -127,7 +127,7 @@ function thema_styles()
 	 wp_enqueue_style('vgnav-theme', get_template_directory_uri() . '/assets/plugins/vega-nav/dist/vgnav-theme-min.css', array(), '1.1', 'all');
  
 	//add css defalt theme
-	wp_enqueue_style('core', get_template_directory_uri() . '/assets/scss/index.css', array(), '1.1', 'all'); 
+	wp_enqueue_style('core', get_template_directory_uri() . '/assets/scss/index.css', array(), '1.2', 'all'); 
 }
 add_action('wp_enqueue_scripts', 'thema_styles'); 
  

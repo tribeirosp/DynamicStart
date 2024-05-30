@@ -6,6 +6,7 @@
 		background-color: #fff;
 
 		.entry-header {  
+			border-bottom: 1px solid $color_neutral;
 			.entry-title { 
 				font-size: 26px; 
 				line-height: 36px;
@@ -69,7 +70,6 @@
 					}
 				}
 			}
-
 		}
 		ol,ul { 
 			li { 
