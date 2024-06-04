@@ -11,7 +11,7 @@
  * @link 	  http://pluginwp.com.br
  */
 ?>
-<div class="container-fluid rodape mt-4">
+<div class="container-fluid rodape  ">
 	<div class="container">
 		<div class="row">
 	 

@@ -87,6 +87,8 @@ if (!function_exists('dynamic_start_setup')) :
 		if (function_exists('add_theme_support')) {
 
 			add_theme_support('post-thumbnails');
+			add_theme_support( 'elementor' );
+			
 		}
 
 		/**
@@ -250,8 +252,7 @@ if (function_exists('register_sidebar')) {
 
 
  
-
-
+ 
 
 
 
