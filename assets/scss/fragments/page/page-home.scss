@@ -1,1 +1,29 @@
- 
+ .service-box{ 
+	padding: 15px;
+	background: $color_neutral;
+	border-radius: 7px;
+	transition: all 0.7s  ease-out; 
+	cursor: cell;
+	min-height: 220px;
+	@media (max-width: 1399.98px) {
+	}
+	@media (max-width: 1199.98px) {
+	}
+	@media (max-width: 991.98px) {
+	}
+	@media (max-width: 767.98px) {
+		min-height: auto;
+	}
+	@media (max-width: 575.98px) {
+	}  
+	
+	&:hover { 
+		transition: all .7s ease; 
+		background: linear-gradient($color-secondary 0%, $color-destaque 100%);
+		color: #fff;
+		
+	} 
+	
+ } 
+
+  

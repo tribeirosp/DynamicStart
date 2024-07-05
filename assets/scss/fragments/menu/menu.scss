@@ -11,7 +11,7 @@
 
 .vg-nav>ul>li>a {
  
-  color:#1a202c;
+  color:$color-light;
  
 }
 .vg-nav .current-menu-item.current_page_item a,
@@ -20,24 +20,24 @@
 .vg-nav>ul>li.active a,
 .vg-nav>ul>li.show>a {
   border:none;
-  background:#830875;
-  color:#fff
+  background:$color_neutral;
+  color:$color-destaque;
 }
 
 /*** Menu Mobili ***/
 .mm-ocd { 
   a { 
     &:hover { 
-    color: $color-secondary;
+    color: $color-destaque;
     }
   } 
 
 }
 .mm-spn li::before { 
-  color: $color-secondary;
+  color: $color-destaque;
 }
 .mm-spn.mm-spn--navbar::before { 
-  color: $color-secondary;
+  color: $color-destaque;
 }
 .mm-spn li:hover::before{ 
     color: #3d02b3;
@@ -46,8 +46,8 @@
     color: #3d02b3;
 }
 .mm-spn--navbar ul#menu-topo.menu > li.current-menu-ancestor.current-menu-parent.menu-item-has-children > a,
-.mm-spn--navbar ul#menu-topo.menu > li.current-menu-item > a  { color: $color-secondary; font-weight: bold;}
-.mm-spn--navbar ul.iten-submenu  li.current-menu-item a  { color: $color-secondary; font-weight: bold;}
+.mm-spn--navbar ul#menu-topo.menu > li.current-menu-item > a  { color: $color-destaque; font-weight: bold;}
+.mm-spn--navbar ul.iten-submenu  li.current-menu-item a  { color: $color-destaque; font-weight: bold;}
 #navMmenu {
   float: right;
    z-index: 9 ; 
