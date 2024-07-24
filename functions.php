@@ -133,7 +133,6 @@ function thema_styles()
 }
 add_action('wp_enqueue_scripts', 'thema_styles'); 
  
-  
 //Eliminate render-blocking resources do css
 function eliminate_render_blocking_css($html, $handle)
 {
